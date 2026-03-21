@@ -1,0 +1,22 @@
+﻿--- BFS on 8x8 Grid ---
+Start: (0, 0) | Goal: (7, 7)
+Shortest Path Found! Length: 15
+Path taken: [(0, 0), (1, 0), (2, 0), (2, 1), (2, 2), (3, 2), (4, 2), (5, 2), (6, 2), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7)]
+Total Nodes Explored: 49
+
+Grid Visualization:
+S = Start, G = Goal, # = Obstacle, * = Path, . = Explored, + = Unvisited
+ S  .  .  .  .  .  .  . 
+ *  #  #  #  #  #  .  . 
+ *  *  *  #  .  .  .  . 
+ .  .  *  #  .  .  .  . 
+ .  .  *  #  .  #  .  . 
+ .  .  *  #  .  #  #  # 
+ .  .  *  #  .  .  .  + 
+ .  .  *  *  *  *  *  G 
+
+
+Observation:
+- BFS explores level by level (ripples).
+- Notice how many '.' (explored) nodes there are compared to '*' (path) nodes.
+- This illustrates why BFS uses a lot of memory: it keeps track of the 'frontier'.
