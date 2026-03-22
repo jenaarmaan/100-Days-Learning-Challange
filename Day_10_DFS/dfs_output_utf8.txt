@@ -1,0 +1,40 @@
+﻿--- Comparison: BFS vs DFS on 8x8 Grid ---
+Start: (0, 0) | Goal: (7, 7)
+
+========================================
+Metric               | BFS (Queue)  | DFS (Stack) 
+--------------------------------------------------
+Path Found?          | Yes          | Yes         
+Path Length          | 15           | 17          
+Nodes Explored       | 49           | 50          
+========================================
+
+BFS Path (Shortest Guaranteed):
+S = Start, G = Goal, # = Obstacle, * = Path, . = Explored, + = Unvisited
+ S  .  .  .  .  .  .  . 
+ *  #  #  #  #  #  .  . 
+ *  *  *  #  .  .  .  . 
+ .  .  *  #  .  .  .  . 
+ .  .  *  #  .  #  .  . 
+ .  .  *  #  .  #  #  # 
+ .  .  *  #  .  .  .  + 
+ .  .  *  *  *  *  *  G 
+
+
+DFS Path (First Branch Found):
+S = Start, G = Goal, # = Obstacle, * = Path, . = Explored, + = Unvisited
+ S  .  .  .  .  .  .  . 
+ *  #  #  #  #  #  .  . 
+ *  .  .  #  .  .  .  . 
+ *  .  .  #  .  .  .  . 
+ *  .  .  #  .  #  .  . 
+ *  .  .  #  .  #  #  # 
+ *  .  .  #  *  *  *  . 
+ *  *  *  *  *  .  *  G 
+
+
+Reflections:
+- BFS explores all neighbors layer by layer, guaranteeing the shortest path in unweighted grids.
+- DFS dives deep down one branch. It might find a path VERY different from the shortest one.
+- In BFS, we visited more nodes generally if the goal is far, but BFS is systematic.
+- If we reordered the 'moves' list in DFS, we would get a completely different path.
