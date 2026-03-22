@@ -1,0 +1,37 @@
+﻿--- Weighted Search Comparison on 5x5 Grid ---
+Grid layout (Costs):
+[[0 1 5 1 1]
+ [1 9 9 9 1]
+ [1 1 1 9 1]
+ [9 9 1 9 1]
+ [1 1 1 1 1]]
+
+=============================================
+Search Algorithm     | Total Cost | Steps  
+---------------------------------------------
+BFS (Simple Steps)   | 12         | 9      
+UCS (Min Cost)       | 8          | 9      
+=============================================
+
+BFS: Shortest Steps (Ignores weight):
+S = Start, G = Goal, * = Path, [Cost] = Grid values
+|S 0 |* 1 |* 5 |* 1 |* 1 |
+|  1 |  9 |  9 |  9 |* 1 |
+|  1 |  1 |  1 |  9 |* 1 |
+|  9 |  9 |  1 |  9 |* 1 |
+|  1 |  1 |  1 |  1 |G 1 |
+
+
+UCS: Lowest Cost (Respects weight):
+S = Start, G = Goal, * = Path, [Cost] = Grid values
+|S 0 |  1 |  5 |  1 |  1 |
+|* 1 |  9 |  9 |  9 |  1 |
+|* 1 |* 1 |* 1 |  9 |  1 |
+|  9 |  9 |* 1 |  9 |  1 |
+|  1 |  1 |* 1 |* 1 |G 1 |
+
+
+Observation:
+- BFS simply tries the fewest number of squares (steps).
+- UCS avoids the cells with high cost (9s), even if it takes more steps.
+- Notice how UCS 'snakes' through the 1s and avoids the wall of 9s.
