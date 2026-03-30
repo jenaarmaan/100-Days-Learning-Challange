@@ -21,6 +21,7 @@ We sometimes accept a worse solution with a probability $P$:
 $$P = e^{-\frac{\Delta E}{T}}$$
 
 Where:
+
 - $\Delta E$: The difference between the new state and the current state (negative if worse).
 - $T$: **Temperature**, which gradually decreases (cools down) over time.
 
@@ -45,7 +46,7 @@ As $T$ decreases, the algorithm becomes more selective, eventually behaving like
 
 ---
 
-## 6. Weaknesses
+## 6. Weaknesses / failure cases
 
 - **Parameter tuning**: Finding the right initial temperature and cooling rate is tricky.
 - **Slower convergence**: Requires more iterations than simple hill climbing because of the exploration phase.

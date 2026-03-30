@@ -40,7 +40,7 @@ Analogy: Climbing a hill blindfolded — always step upward.
 
 ---
 
-## 6. Weaknesses
+## 6. Weaknesses / failure cases
 
 - Local maxima (stuck on a peak that isn't the highest overall).
 - Plateaus (flat areas where any move is the same).
@@ -48,7 +48,7 @@ Analogy: Climbing a hill blindfolded — always step upward.
 
 ---
 
-## 7. Real systems
+## 7. Where it is used in real systems
 
 - Hyperparameter tuning.
 - Scheduling.
