@@ -2,7 +2,7 @@
 
 TOPIC NAME:
 
-**C22. STRIPS Representation**
+## Topic: C22. STRIPS Representation
 
 ---
 
@@ -30,7 +30,7 @@ Without a formal representation:
 
 STRIPS solves this by defining actions using:
 
-```
+```text
 Preconditions
 Add Effects
 Delete Effects
@@ -56,7 +56,7 @@ In STRIPS, the world is represented as a **set of logical facts**.
 
 Example state:
 
-```
+```text
 At(Robot, A)
 BoxAt(B)
 HandEmpty
@@ -64,7 +64,7 @@ HandEmpty
 
 An action has:
 
-```
+```text
 Action: Pick(Box)
 
 Preconditions:
@@ -82,7 +82,7 @@ Delete Effects:
 
 After applying the action:
 
-```
+```text
 Remove Delete Effects
 Add Add Effects
 ```
@@ -99,7 +99,7 @@ Represent world as logical facts.
 
 Example:
 
-```
+```text
 {At(Robot,A), BoxAt(B), HandEmpty}
 ```
 
@@ -107,7 +107,7 @@ Example:
 
 Define actions using STRIPS format:
 
-```
+```text
 Preconditions
 Add list
 Delete list
@@ -117,7 +117,7 @@ Delete list
 
 Planner checks:
 
-```
+```text
 Are preconditions satisfied?
 ```
 
@@ -176,7 +176,7 @@ Modern planners extend STRIPS with richer representations.
 
 ---
 
-# 9. 30–60 Minute Coding Task
+## 9. 30–60 Minute Coding Task
 
 ### Goal
 
@@ -188,7 +188,7 @@ Implement a **simple STRIPS-style planner** that applies actions to reach a goal
 
 Initial State
 
-```
+```text
 At(A)
 BoxAt(B)
 HandEmpty
@@ -196,13 +196,13 @@ HandEmpty
 
 Goal
 
-```
+```text
 BoxAt(A)
 ```
 
 Actions
 
-```
+```text
 Move(A,B)
 Move(B,A)
 Pick(Box)

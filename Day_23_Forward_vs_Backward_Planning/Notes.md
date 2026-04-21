@@ -2,7 +2,7 @@
 
 TOPIC NAME:
 
-**C23. Forward vs Backward Planning**
+## Topic: C23. Forward vs Backward Planning
 
 ---
 
@@ -49,7 +49,7 @@ Start with the **initial state**.
 
 Repeatedly apply actions whose **preconditions are satisfied**.
 
-```
+```text
 Initial State
       ↓
 Action 1
@@ -76,7 +76,7 @@ Ask:
 
 Then replace the goal with the **preconditions of that action**.
 
-```
+```text
 Goal
  ↑
 Action that produces goal
@@ -94,25 +94,25 @@ Initial state
 
 Goal:
 
-```
+```text
 BoxAt(A)
 ```
 
 Backward planner asks:
 
-```
+```text
 Which action produces BoxAt(A)?
 ```
 
 Answer:
 
-```
+```text
 Drop(Box)
 ```
 
 Then new subgoal becomes:
 
-```
+```text
 Holding(Box)
 At(A)
 ```
@@ -123,7 +123,7 @@ Planner continues reasoning backward.
 
 ## 4. How it works (high-level steps)
 
-### Forward Planning
+### Forward Planning - Process
 
 1. Start with initial state.
 2. Find applicable actions.
@@ -132,7 +132,7 @@ Planner continues reasoning backward.
 
 ---
 
-### Backward Planning
+### Backward Planning - Process
 
 1. Start with goal conditions.
 2. Find actions that produce the goal.
@@ -143,13 +143,13 @@ Planner continues reasoning backward.
 
 ## 5. Strengths
 
-### Forward Planning
+### Forward Planning - Strengths
 
 - Simple and intuitive
 - Works well when branching factor is small
 - Easy to implement
 
-### Backward Planning
+### Backward Planning - Strengths
 
 - Focuses only on relevant actions
 - Reduces unnecessary exploration
@@ -159,12 +159,12 @@ Planner continues reasoning backward.
 
 ## 6. Weaknesses / failure cases
 
-### Forward Planning
+### Forward Planning - Limitations
 
 - May explore many irrelevant states
 - State explosion in large environments
 
-### Backward Planning
+### Backward Planning - Limitations
 
 - Requires reasoning about goal dependencies
 - Harder to implement
@@ -196,7 +196,7 @@ Many modern planners combine both strategies.
 
 ---
 
-# 9. 30–60 Minute Coding Task
+## 9. 30–60 Minute Coding Task
 
 ### Goal
 
@@ -208,7 +208,7 @@ Implement a **simple forward planner** and compare it conceptually with backward
 
 World state:
 
-```
+```text
 RobotAt(A)
 BoxAt(B)
 Holding(False)
@@ -216,13 +216,13 @@ Holding(False)
 
 Goal:
 
-```
+```text
 BoxAt(A)
 ```
 
 Actions:
 
-```
+```text
 Move(A,B)
 Move(B,A)
 Pick(Box)

@@ -2,7 +2,7 @@
 
 TOPIC NAME:
 
-**C24. Planning Graphs**
+## Topic: C24. Planning Graphs
 
 ---
 
@@ -50,7 +50,7 @@ Planning graphs provide **powerful heuristics and pruning mechanisms**.
 
 A planning graph consists of alternating layers:
 
-```
+```text
 State Layer (S0)
 Action Layer (A0)
 State Layer (S1)
@@ -70,7 +70,7 @@ Each layer represents **what is possible at that step**.
 
 Initial state:
 
-```
+```text
 RobotAt(A)
 BoxAt(B)
 HandEmpty
@@ -78,13 +78,13 @@ HandEmpty
 
 Goal:
 
-```
+```text
 BoxAt(A)
 ```
 
 Planning graph expands like this:
 
-```
+```text
 S0: Initial facts
 
 A0: Possible actions
@@ -98,7 +98,7 @@ S2: New resulting states
 
 The planner stops when:
 
-```
+```text
 Goal appears in state layer without mutex conflicts
 ```
 
@@ -196,7 +196,7 @@ They are also used to generate **heuristics for search planners**.
 
 ---
 
-# 9. 30–60 Minute Coding Task
+## 9. 30–60 Minute Coding Task
 
 ### Goal
 
@@ -210,7 +210,7 @@ This simplified version focuses on **layer construction**, not full GraphPlan.
 
 Initial state:
 
-```
+```text
 At(A)
 BoxAt(B)
 HandEmpty
@@ -218,13 +218,13 @@ HandEmpty
 
 Goal:
 
-```
+```text
 BoxAt(A)
 ```
 
 Actions:
 
-```
+```text
 Move(A,B)
 Move(B,A)
 Pick(Box)

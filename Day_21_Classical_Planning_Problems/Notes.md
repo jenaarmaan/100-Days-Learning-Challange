@@ -2,7 +2,7 @@
 
 TOPIC NAME:
 
-**C21. Classical Planning Problems**
+## Topic: C21. Classical Planning Problems
 
 ---
 
@@ -43,7 +43,7 @@ Classical planning provides a structured framework to compute:
 
 A classical planning problem consists of:
 
-```
+```text
 1. Initial State
 2. Goal State
 3. Set of Actions
@@ -64,20 +64,20 @@ Planning becomes:
 
 Initial:
 
-```
+```text
 Robot at A
 Box at B
 ```
 
 Goal:
 
-```
+```text
 Box at A
 ```
 
 Actions:
 
-```
+```text
 Move(A → B)
 Pick(Box)
 Move(B → A)
@@ -158,7 +158,7 @@ Modern AI systems extend classical planning with uncertainty and learning.
 
 ---
 
-# 9. 30–60 Minute Coding Task
+## 9. 30–60 Minute Coding Task
 
 ### Goal
 
@@ -172,14 +172,14 @@ Simple world:
 
 Initial state:
 
-```
+```text
 At(A)
 BoxAt(B)
 ```
 
 Goal:
 
-```
+```text
 BoxAt(A)
 ```
 
